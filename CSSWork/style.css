@@ -23,17 +23,46 @@ padding-top: 50px;
 */
 
 .container{
-height: 400px;
-width: 500px;
+height: 500px;
+width: 1000px;
 background-color:cyan;
 border: 2px solid red;
+display: flex;
+flex-direction:row;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items:center;
 
 }
 
-.child1,.child2,.child3{
+.child1,.child2,.child3,.child4{
     border: 2px solid;
-    height: 100px;
-    width: 100px;
-    display: inline-block;
+    height: 300px;
+    width: 230px;
     
+    
+}
+
+.child1{
+    display: flex;
+    gap: 4px;
+    flex-basis: 50%;
+}
+.child11,.child12,child13,.child14{
+border: 2px dotted red;
+
+
+}
+.child11{
+background-color: blueviolet;
+flex-basis: 30%;
+}
+.child12{
+background-color: aquamarine;
+}
+.child13{
+background-color: brown;
+}
+.child14{
+background-color: burlywood;
 }
