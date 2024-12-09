@@ -3,12 +3,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 
-function Login() {
+function Login({regdata}) {
 const[email,setEmail]=useState()
 const[password,setPassword]=useState()
 
-  function showData(){
+  function verification(){
       alert(email);
+      alert(password);
+      if(email==regdata.email){
+        alert("user is valid");
+      }
+      else{
+        alert("user is invalid");
+      }
   }
   
   
@@ -29,7 +36,7 @@ const[password,setPassword]=useState()
     <input type="checkbox" class="form-check-input" id="exampleCheck1" />
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-  <button type="submit" onClick={showData} class="btn btn-primary">Submit</button>
+  <button type="submit" onClick={verification} class="btn btn-primary">Login</button>
 </form>
     </div>
   )
